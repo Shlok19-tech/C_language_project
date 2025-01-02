@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    
+    srand(time(0));
+
+    int rn = (rand() % 3) + 1;
+
+   printf("Welcome!!\n");
+   
+   printf("1. Rock\n2. Paper\n3. Scissors\n");
+   
+   int n;
+
+   printf("Enter your choice:");
+   scanf("%d",&n);
+
+   printf("Computer choice:%d\n",rn);
+
+   if(n==rn)
+   {
+    printf("Its a tie!!");
+   }
+   else if (n==1 && rn==3 || n==2 && rn==1 || n==3 && rn==2)
+   {
+    printf("You Win!!");
+   }
+   else
+   {
+    printf("You Lose!!");
+    
+   }
+    return 0;
+}
