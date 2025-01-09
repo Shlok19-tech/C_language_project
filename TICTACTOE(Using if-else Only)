@@ -1,0 +1,215 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+int main(){
+	char a[3][3]={'A','B','C','D','E','F','G','H','I'};
+	int e;
+
+	printf("Welcome!!!\n");
+	printf("Index is from A to I\n");
+
+    char n;
+	char c;
+
+    for(int i=0;i<3;i++)
+	{
+			printf("\n");	
+		for(int j=0;j<3;j++)
+		{
+		printf("%c | ",a[i][j]);				
+		}
+		printf("\n___________");
+		printf(" ");
+	}
+
+for(int i=0;i<9;i++)
+{
+        printf("\n");
+        printf("\n");
+
+	printf("Enter Index:");
+	scanf("%c",&n);
+    fflush(stdin);
+
+	printf("Enter O or X:");
+	scanf("%c",&c);
+    fflush(stdin);
+
+      for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			if(n=='A')
+			{
+				a[0][0]=c;
+			}
+			else if(n=='B')
+			{
+				a[0][1]=c;
+			}
+			else if(n=='C')
+			{
+				a[0][2]=c;
+			}
+			else if(n=='D')
+			{
+				a[1][0]=c;
+			}
+			else if(n=='E')
+			{
+				a[1][1]=c;
+			}
+			else if(n=='F')
+			{
+				a[1][2]=c;
+			}
+			else if(n=='G')
+			{
+				a[2][0]=c;
+			}
+			else if(n=='H')
+			{
+				a[2][1]=c;
+			}
+			else if(n=='I')
+			{
+				a[2][2]=c;
+			}
+		}
+			
+	}
+    for(int i=0;i<3;i++)
+	{
+			
+		for(int j=0;j<3;j++)
+		{
+			if(a[0][0]=='O' && a[0][1]=='O' && a[0][2]=='O')
+			{
+				e=1;
+				
+			}
+			else if(a[1][0]=='O' && a[1][1]=='O' && a[1][2]=='O')
+			{
+				e=1;
+				
+			}
+			else if(a[2][0]=='O' && a[2][1]=='O' && a[2][2]=='O')
+			{
+				e=1;
+				
+			}
+			else if(a[0][0]=='O' && a[1][1]=='O' && a[2][2]=='O')
+				{
+				e=1;
+				
+			}
+			else if(a[0][2]=='O' && a[1][1]=='O' && a[2][0]=='O')
+			{
+				e=1;
+				
+			}
+            else if(a[0][0]=='O' && a[1][0]=='O' && a[2][0]=='O')
+            {
+                e=1;
+            }
+            else if(a[0][1]=='O' && a[1][1]=='O' && a[2][1]=='O')
+            {
+                e=1;
+            }
+            else if(a[0][2]=='O' && a[1][2]=='O' && a[2][2]=='O')
+            {
+                e=1;
+            }
+			else if(a[0][0]=='X' && a[0][1]=='X' && a[0][2]=='X')
+			{
+				e=2;
+				
+			}
+			else if(a[1][0]==1 && a[1][1]==1 && a[1][2]==1)
+			{
+				e=2;
+				
+			}
+			else if(a[2][0]=='X' && a[2][1]=='X' && a[2][2]=='X')
+			{
+				e=2;
+				
+			}
+			else if(a[0][0]=='X' && a[1][1]=='X' && a[2][2]=='X')
+				{
+				e=2;
+				
+			}
+			else if(a[0][2]=='X' && a[1][1]=='X' && a[2][0]=='X')
+			{
+				e=2;
+				
+			}
+              else if(a[0][0]=='X' && a[1][0]=='X' && a[2][0]=='X')
+            {
+                e=2;
+            }
+            else if(a[0][1]=='X' && a[1][1]=='X' && a[2][1]=='X')
+            {
+                e=2;
+            }
+            else if(a[0][2]=='X' && a[1][2]=='X' && a[2][2]=='X')
+            {
+                e=2;
+            }
+
+			
+		}
+		
+	}
+      for(int i=0;i<3;i++)
+	{
+			printf("\n");	
+		for(int j=0;j<3;j++)
+		{
+		printf("%c | ",a[i][j]);				
+		}
+		printf("\n___________");
+		printf(" ");
+	}
+    printf("\n");
+    
+	if(e==1)
+	{
+		printf("Player 1 Wins!!\n"); 
+		 for(int i=0;i<3;i++)
+	{
+			printf("\n");	
+		for(int j=0;j<3;j++)
+		{
+		printf("%c | ",a[i][j]);				
+		}
+		printf("\n___________");
+		printf(" ");
+	}		exit(0);	
+	}
+    else if(e==2)
+	{
+		printf("Player 2 Wins!!\n"); 
+		 for(int i=0;i<3;i++)
+	{
+			printf("\n");	
+		for(int j=0;j<3;j++)
+		{
+		printf("%c | ",a[i][j]);				
+		}
+		printf("\n___________");
+		printf(" ");
+	}
+		exit(0);
+	}
+
+    }
+
+    if(e!=0 && e!=1)
+    {
+        printf("Its a Draw!!");
+        
+    }
+   return 0;
+}
